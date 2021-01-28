@@ -1595,6 +1595,23 @@ SWIGEXPORT jdouble JNICALL Java_jscip_SCIPJNIJNI_SCIPgetGap(JNIEnv *jenv, jclass
 }
 
 
+SWIGEXPORT jint JNICALL Java_jscip_SCIPJNIJNI_SCIPchgVarObj(JNIEnv *jenv, jclass jcls, jlong jarg1, jlong jarg2, jdouble jarg3) {
+  jint jresult = 0 ;
+  SCIP *arg1 = (SCIP *) 0 ;
+  SCIP_VAR *arg2 = (SCIP_VAR *) 0;
+  double arg3;
+  SCIP_RETCODE result;
+
+  (void)jenv;
+  (void)jcls;
+  arg1 = *(SCIP **)&jarg1;
+  arg2 = *(SCIP_VAR **)&jarg2;
+  arg3 = (double)jarg3;
+  result = (SCIP_RETCODE)SCIPchgVarObj(arg1,arg2,arg3);
+  return jresult;
+}
+
+
 SWIGEXPORT jint JNICALL Java_jscip_SCIPJNIJNI_SCIPcreateSol(JNIEnv *jenv, jclass jcls, jlong jarg1, jlong jarg2, jlong jarg3) {
   jint jresult = 0 ;
   SCIP *arg1 = (SCIP *) 0 ;

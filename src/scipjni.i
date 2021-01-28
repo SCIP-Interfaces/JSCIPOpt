@@ -182,6 +182,7 @@ SCIP_RETCODE   SCIPsetEmphasis(SCIP* scip, SCIP_PARAMEMPHASIS paramemphasis, SCI
 SCIP_RETCODE   SCIPsetObjsense(SCIP* scip, SCIP_OBJSENSE objsense);
 SCIP_OBJSENSE  SCIPgetObjsense(SCIP* scip);
 SCIP_Real      SCIPgetGap(SCIP* scip);
+SCIP_RETCODE   SCIPchgVarObj(SCIP* scip, SCIP_VAR* var, SCIP_Real obj);
 
 /* from scip_sol.h */
 SCIP_RETCODE   SCIPcreateSol(SCIP* scip, SCIP_SOL** sol, SCIP_HEUR* heur);

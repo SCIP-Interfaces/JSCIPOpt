@@ -1605,7 +1605,7 @@ SWIGEXPORT jint JNICALL Java_jscip_SCIPJNIJNI_SCIPchgVarObj(JNIEnv *jenv, jclass
   (void)jenv;
   (void)jcls;
   arg1 = *(SCIP **)&jarg1;
-  arg2 = *(SCOP_VAR **)&jarg2;
+  arg2 = *(SCIP_VAR **)&jarg2;
   arg3 = (double)jarg3;
   result = (SCIP_RETCODE)SCIPchgVarObj(arg1,arg2,arg3);
   return jresult;
